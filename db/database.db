@@ -1,0 +1,18 @@
+-- Tabla para profesionales
+CREATE TABLE profesionales (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    oficio TEXT NOT NULL,
+    delegacion TEXT NOT NULL,
+    telefono TEXT,
+    correo TEXT
+);
+
+-- Tabla para mensajes de contacto
+CREATE TABLE contactos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    correo TEXT NOT NULL,
+    mensaje TEXT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

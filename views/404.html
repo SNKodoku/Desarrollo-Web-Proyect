@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>404 - Página perdida | Chamvitz</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      background: #fff;
+      color: #ff4e50;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .emoji {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/images/logo_cham.jpg" alt="Chamvitz Logo" class="logo" />
+    <div class="emoji">🚧</div>
+    <h1>404</h1>
+    <p>¡Vaya! Te perdiste en la obra 😅</p>
+    <p>La página que buscas no existe o fue demolida.</p>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>

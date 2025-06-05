@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Búsqueda de Profesional - Chamvitz</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header class="header-flex">
+    <img src="/images/logo_cham.jpg" alt="Chamvitz Logo" class="logo">
+    <h1>Buscar Profesionales</h1>
+    <nav class="navbar">
+      <div class="menu-icon" id="menu-icon" role="button" aria-label="Menú de navegación">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="profesionales.html">Profesionales</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="registrar.html">Registrar profesional</a></li>
+        <li><a href="busqueda.html">Búsqueda de Profesional</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="busqueda">
+      <h2>Realizar búsqueda</h2>
+
+      <form id="search-form">
+        <label for="oficio">Selecciona un oficio:</label>
+        <select name="oficio" id="oficio" required>
+          <option value="">-- Selecciona un oficio --</option>
+          <option value="albañil">Albañil</option>
+          <option value="carpintero">Carpintero</option>
+          <option value="electricista">Electricista</option>
+          <option value="plomero">Plomero</option>
+          <option value="pintor">Pintor</option>
+        </select>
+
+        <label for="delegacion">Selecciona una delegación:</label>
+        <select name="delegacion" id="delegacion" required>
+          <option value="">-- Selecciona una delegación --</option>
+          <option value="alvaro_obregon">Álvaro Obregón</option>
+          <option value="azcapotzalco">Azcapotzalco</option>
+          <option value="benito_juarez">Benito Juárez</option>
+          <option value="coyoacan">Coyoacán</option>
+          <option value="cuajimalpa">Cuajimalpa</option>
+          <option value="cuauhtemoc">Cuauhtémoc</option>
+          <option value="gustavo_a_madero">Gustavo A. Madero</option>
+          <option value="iztacalco">Iztacalco</option>
+          <option value="iztapalapa">Iztapalapa</option>
+          <option value="magdalena_contreras">Magdalena Contreras</option>
+          <option value="miguel_hidalgo">Miguel Hidalgo</option>
+          <option value="milpa_alta">Milpa Alta</option>
+          <option value="tlahuac">Tláhuac</option>
+          <option value="tlalpan">Tlalpan</option>
+          <option value="venustiano_carranza">Venustiano Carranza</option>
+          <option value="xochimilco">Xochimilco</option>
+        </select>
+
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <section id="resultados-busqueda">
+      <h2>Resultados:</h2>
+      <div id="resultados-busqueda" class="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chamvitz. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

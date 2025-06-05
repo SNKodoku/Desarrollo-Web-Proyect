@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------------------- HEADER Y NAV ---------------------- */
+
+header {
+  background-color: #333;
+  color: white;
+  width: 100%;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+.header-flex h1 {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-list li a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+/* ---------------------- FORMULARIOS ---------------------- */
+
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="url"],
+form textarea,
+form select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* ---------------------- SECCIONES DE PÁGINA ---------------------- */
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #4caf50;
+}
+
+section p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* ---------------------- CARDS PROFESIONALES ---------------------- */
+
+.profesionales-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.profesional-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 250px;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.profesional-card:hover {
+  transform: translateY(-5px);
+}
+
+.profesional-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.profesional-card h3 {
+  color: #2c3e50;
+  margin: 0.5rem 0;
+}
+
+.profesional-card p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* ---------------------- LOGIN ESPECÍFICO ---------------------- */
+
+#login-box {
+  margin-top: 2rem;
+}
+
+#login-box h2 {
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* ---------------------- RESPONSIVO ---------------------- */
+
+@media (max-width: 768px) {
+  form {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .profesionales-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-flex h1 {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ---------------------- Admin ---------------------- */
+
+.admin-lista {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-prof {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contador-profesionales {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/*-------------------------cards--------------------------*/
+
+.grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------------------- PÁGINA DE INICIO ---------------------- */
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  color: white;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+  background-color: white;
+  color: #388e3c;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #e8f5e9;
+}
+
+/* ---------------------- ICONOS DE OFICIOS ---------------------- */
+
+.oficios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.oficio-card {
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.oficio-card:hover {
+  transform: translateY(-6px);
+}
+
+.oficio-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #4caf50;
+}
+
+.oficio-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* ---------------------- RESPONSIVO INICIO ---------------------- */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+}
+
+/* ---------------------- MEJORAS GENERALES DE ESTILO ---------------------- */
+
+section {
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+.boton-accion {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #ff4e50;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boton-accion:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* ---------------------- MEJORA NAVBAR ---------------------- */
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-list li a:hover {
+  background-color: #4caf50;
+  color: white;
+  transform: scale(1.05);
+}

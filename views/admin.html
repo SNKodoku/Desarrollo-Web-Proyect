@@ -1,0 +1,48 @@
+<!-- views/admin.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Chamvitz</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="header-flex">
+    <img src="/images/logo_cham.jpg" alt="Chamvitz Logo" class="logo">
+    <h1>Panel de Administración</h1>
+    <nav class="navbar">
+      <div class="menu-icon" id="menu-icon" role="button" aria-label="Menú de navegación">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="profesionales.html">Profesionales</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="registrar.html">Registrar profesional</a></li>
+        <li><a href="busqueda.html">Búsqueda de Profesional</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Gestión de Profesionales</h2>
+      <button id="btn-borrar-todos">🗑️ Eliminar Todos</button>
+      <button onclick="window.location.href='registrar.html'">➕ Agregar Profesional</button>
+    </section>
+
+    <section>
+      <h2>Lista de Profesionales Registrados</h2>
+      <p id="contador-profesionales"><strong>Total registrados:</strong> <span id="total-profesionales">0</span></p>
+      <div id="lista-profesionales-admin" class="admin-lista"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chamvitz. Panel administrativo.</p>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

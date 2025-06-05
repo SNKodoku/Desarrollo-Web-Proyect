@@ -1,0 +1,61 @@
+<!-- contacto.html -->
+<!<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto - Chamvitz</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header class="header-flex">
+    <img src="/images/logo_cham.jpg" alt="Chamvitz Logo" class="logo">
+    <h1>Contáctanos</h1>
+    <nav class="navbar">
+      <div class="menu-icon" id="menu-icon" role="button" aria-label="Menú de navegación">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="profesionales.html">Profesionales</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="registrar.html">Registrar profesional</a></li>
+        <li><a href="busqueda.html">Búsqueda de Profesional</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contacto">
+      <h2>¿Tienes preguntas o sugerencias?</h2>
+      <p>Rellena el siguiente formulario y nos pondremos en contacto contigo:</p>
+
+      <form id="form-contacto">
+        <div class="input-grupo">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="input-grupo">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="input-grupo">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chamvitz. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
